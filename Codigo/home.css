@@ -86,12 +86,8 @@ a {
   padding: 0px;  
 }
 
-/* Menu: 1200 - Inicio */
-
-@media screen and (min-width:1025px) and (max-width:12000px){
-
   body{
-    background-image: url(../img/fundo.png);
+    background-image: url(./img/fundo.png);
     background-repeat: no-repeat;
     background-size: 100% 300%;
   }
@@ -134,7 +130,6 @@ a {
     border-radius: 3px;
     cursor: pointer;
   }
-}
 
 /* Cabeçalho - Fim */
 
