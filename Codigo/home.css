@@ -1,0 +1,344 @@
+/* Difinições gerais - Inicio */
+
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 1rem;
+  font-family: Arial;
+}
+
+h1{
+  display:inline-block;
+  margin: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color:#555555;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.atividades p{
+  margin: 50px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color:#555555;
+}
+
+.fa {
+  float: right;
+}
+
+/* Difinições gerais - Fim */
+
+/* Cabeçalho - Inicio */
+
+.header {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  background-color:white;
+  clear: both;
+  overflow: auto;
+}
+
+.menu a:hover{
+  color: black;
+  background-color:#e5e9f2;
+  opacity: 30%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.logo:hover{
+  color: white;
+  background-color:#697586;
+  text-decoration: none;
+}
+
+.logo{
+  font-size: 1rem;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  color: white;
+  background-color: #8190a5;
+}
+
+.menu li {
+  margin-left: 80px;  
+}
+
+.menu li a {
+  display: block;
+  padding: 0px;  
+}
+
+/* Menu: 1200 - Inicio */
+
+@media screen and (min-width:1025px) and (max-width:12000px){
+
+  body{
+    background-image: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 300%;
+  }
+  
+
+  .filter3{
+    position: center;
+    margin-top: 5px;
+    transform: translate3d( 27%, 0, 0 );
+    width: 65%;
+    height: 80%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(300, 300, 300, 1);
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+  }
+  
+  .menu li {
+    margin-left: 50px;
+  }
+  
+  .menu li a {
+    display: block;
+    font-size: 1rem;
+  }
+  
+  #busca {
+    margin-top: 0px;
+    padding: 0px;
+  }
+
+  #btn{
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+/* Cabeçalho - Fim */
+
+#txtbusca {
+  border:0px solid #222;
+  background:white;
+  width:200px;
+  height:25px;
+  margin:0 auto;
+  padding:5px 0 5px 5px;
+  float:left; 
+  line-height:36px;
+}
+
+/* CSS FLEXBOX 1 */
+
+.eventos {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Botão ver mais - Inicio */
+
+.config {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+          background-color:#47525e;
+          color: #ffffff;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 80px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+
+  font-weight: 700;
+}
+
+.ver-evento{
+  margin-left: 190px;
+  color: #ffffff;
+  border-color:#47525e;
+  background-color:#47525e;
+}
+
+.config:hover {
+  color: #fff;
+  outline: 0;
+}
+
+.ver-evento:hover {
+  color: #fff;
+  background-color:#28333f;
+  outline: 0;
+}
+
+.config {
+  border-color: #47525e;
+  color: #ffffff;;
+
+}
+
+.config:hover {
+  background-color:#28333f;
+  border-color:#28333f;;
+}
+
+
+
+/* Botão ver mais - Fim */
+
+div article {
+  background-color:#e5e9f2;
+  opacity: 100%;
+  overflow: auto;
+  padding: 9px;
+  width: 400px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+.direita{
+  background-color:#e5e9f2;
+  opacity: 100%;
+  overflow: auto;
+  padding: 9px;
+  margin-bottom: 20px;
+  width: 400px;
+  padding-left: 9px;
+  margin-left: 250px;
+}
+
+div article img {
+    float: right;
+    margin: 0px;
+    width: 2px;
+    height: 50px;
+}
+
+.ultimo {
+  background-color: white;
+  float: right;
+
+}
+.ultimo {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+          background-color:#47525e;
+          color: #ffffff;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.ultimo{
+  margin: 10px;
+  color: #ffffff;
+  border-color:#47525e;
+  background-color:#47525e;
+}
+
+.ultimo:hover {
+  background-color:#28333f;
+  border-color:#28333f;;
+}
+
+div article img {
+    margin: 8px;
+    width: 110px;
+}
+
+/* SECTION GRID 3 */
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  max-width: 800px;
+  padding: 10px;
+}
+
+.grid3-item:nth-child(1) {
+  grid-row: 1 / 3;
+}
+
+.grid3-item {
+  display: grid;
+}
+
+.grid3-item .perfil {
+  grid-column: 1;
+  grid-row: 1/3;
+  width: 210px;
+  height: 200px;
+  margin-top: 0px;
+}
+
+/* Rodapé - Inicio */
+
+.footer {
+  background: #e5e9f2;
+  color: #47525e;
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.footer img{
+  width: 70px;
+  margin-right: 20px;
+}
+
+/* Rodapé - Fim */
+
