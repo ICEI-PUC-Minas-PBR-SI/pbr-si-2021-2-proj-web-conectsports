@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
+        <title>Perfil</title>
+        <script src="igr.js"></script>
+        <script src="fkatv.js"></script>
+        <link rel="stylesheet" href="perfil.css" />
+
+        <script type="text/javascript">
+            var nme = JSON.parse(localStorage.getItem("cadastro")).nome;
+            var usu = JSON.parse(localStorage.getItem("cadastro")).usuario;
+            onload = () => {
+                let pessoa = {
+                  "nome": JSON.parse(localStorage.getItem("cadastro")).nome,
+                  "usuario": JSON.parse(localStorage.getItem("cadastro")).usuario,
+        
+                };
+                console.log(pessoa['pessoa']);
+                document.getElementById("nome").value = nme;
+                document.getElementById("usuario").value = usu;
+            }
+        </script>
+
+        <script>
+            function previewFile(){
+                var preview = document.querySelector('.imagem-usuario'); //selects the query named img
+                var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+                var reader  = new FileReader();
+        
+                reader.onloadend = function () {
+                    preview.src = reader.result;
+                }
+        
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.src = "";
+                }
+        }
+        
+        previewFile();
+        </script>
+        
+        <script>
+            function Mudarestado(el) {
+                var display = document.getElementById(el).style.display;
+                if(display == "none")
+                    document.getElementById(el).style.display = 'hidden';
+                else
+                    document.getElementById(el).style.display = 'none';
+            }
+        </script>
+
+    </head>
+
+    <body>
+        
+
+        <header class="header">
+            <img class="logo" width="60px" height="60px" src="./img/logo.png" alt="">
+            <nav class="nav-menu">
+              <input type="checkbox" id="menuToggle">
+              <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+              </label>
+              <ul class="menu">        
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Evento</a></li>
+                <li><a href="#">Criar Evento</a></li>
+                <li><a href="#">Perfil</a></li>
+              </ul>
+              <ul class="menu-tablet">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Evento</a></li>
+                <li><a href="#">Criar Evento</a></li>
+                <li><a href="#">Perfil</a></li>      
+              </ul>     
+            </nav>
+            <div id="busca">
+                  <input id="txtbusca" type="search" placeholder="Pesquisar..."/>
+                  <img src="./img/lupa.png" id="btn">
+              </div>
+          </header><div class="espaco">espaço</div>          
+
+        <section class="container-perfil">
+            <section class="container-dados-perfil">
+                <div id="perfil-card">
+                    <div class='perfil-preview'>            
+                        <div class="name-perfil-preview">
+                            <div class='preview-nome'>                                
+                                <input  id="nome" disabled></p>
+                            </div>                        
+                            <div class="infos-perfil-preview">                         
+                                <div class="idade">
+                                    2
+                                    <!--idade--> 
+                                </div>
+                            </div>	
+                        </div>
+
+                        <div class="imagem-perfil">
+                            <img id="primeira-imagem" src='./img/perfil.png' alt="aaaa">
+                            <img class="imagem-usuario" src='' alt="Ecolher Imagem" height="220">
+                            <img src="usuario" alt="">
+                        </div>
+                        <div class="info-perfil-preview">
+                            <p>Adicionar / Editar / Excluir Imagem de Perfil
+                                <img class="caneta" src="./img/caneta.png" alt="">
+                                <input onclick="Mudarestado('primeira-imagem')" class="arquivo" type="file" onchange="previewFile()"><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-perfil-descricao">
+                    <div class="perfil-box-nome">
+                        <span class="perfil-nome">
+                            Descrição
+                        </span>
+
+                        <span class="perfil-usuario">
+                            @<input  id="usuario" disabled></p>
+                        </span>
+
+                    </div>
+
+                    <div class="descricao">
+                        Sem descrição...
+                    </div>
+            </section>
+
+            <section class="container-dados-numeros">
+                <div class="box-numeros">
+                    <span class="box-numeros-title">
+                        Exercícios completos
+                    </span>
+
+                    15
+                </div>
+
+                <div class="box-numeros">
+                    <span class="box-numeros-title">
+                        lorem
+                    </span>
+
+                    0
+                </div>
+
+                <div class="box-numeros">
+                    <span class="box-numeros-title">
+                        lorem
+                    </span>
+
+                    0
+                </div>
+
+                <div class="box-numeros">
+                    <span class="box-numeros-title">
+                        lorem
+                    </span>
+
+                    0
+                </div>
+
+                <div class="box-numeros">
+                    <span class="box-numeros-title">
+                        lorem
+                    </span>
+
+                    0
+                </div>
+            </section>
+
+            <section class="perfil-container container-interesses">
+                <div class="container-interesses-title">
+                    INTERESSES
+                </div>
+
+                <div class="box-interesses">
+                    <div class="tags">Ciclismo</div>
+                    <div class="tags">Corrida</div>
+                    <div class="tags">Alpinismo</div>
+                </div>
+            </section>
+
+            
+            <section class="perfil-atividades">
+                <section class="perfil-container container-atividades">
+                    <div class="container-atividades-title">
+                        HISTÓRICO DE ATIVIDADES
+                    </div>
+
+                    <div class="box-atividades">
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div class="atividade-descricao">Corrida - 2h</div>
+                            </a>
+                        </div>
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div class="atividade-descricao">Ciclismo - 1h30</div>
+                            </a>
+                        </div>
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div class="atividade-descricao">Corrida - 1h</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="perfil-container container-atividades">
+                    <div class="container-atividades-title">
+                        EVENTOS
+                    </div>
+
+                    <div class="box-atividades">
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div id="eventos" class="atividade-descricao"></div>
+                            </a>
+                        </div>
+                        <br>
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div id="eventos1"class="atividade-descricao"></div>
+                            </a>
+                        </div>
+                        <br>
+                        <div class="box-atividade">
+                            <a class="atividade-link" href="">
+                                <div id="eventos2"class="atividade-descricao"></div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </section>	
+        </section>
+
+        <script>
+            var events = '';
+            var e2 = '';
+            var e3 = '';
+                events += `<p class="events">Data: ${ db.dados[0].data } <br> </p>`;
+                events += `<p class="events">Hora: ${ db.dados[0].hora } <br> </p>`;
+                events += `<p class="events">Local: ${ db.dados[0].local } <br> </p>`;
+            document.getElementById('eventos').innerHTML = events;
+
+                e2 += `<p class="events">Data: ${ db.dados[1].data } <br> </p>`;
+                e2 += `<p class="events">Hora: ${ db.dados[1].hora } <br> </p>`;
+                e2 += `<p class="events">Local: ${ db.dados[1].local } <br> </p>`;
+            document.getElementById('eventos2').innerHTML = e2;
+
+                e3 += `<p class="events">Data: ${ db.dados[2].data } <br> </p>`;
+                e3 += `<p class="events">Hora: ${ db.dados[2].hora } <br> </p>`;
+                e3 += `<p class="events">Local: ${ db.dados[2].local } <br> </p>`;
+            document.getElementById('eventos1').innerHTML = e3;
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"crossorigin="anonymous"></script>
+    </body>
+</html>
