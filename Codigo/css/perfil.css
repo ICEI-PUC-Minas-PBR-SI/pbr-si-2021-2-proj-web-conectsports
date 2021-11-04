@@ -217,11 +217,11 @@ body{
 /* Menu - Inicio */
 @media screen and (min-width:820px) and (max-width:12000px){  
     .usuario{
-      border-color: transparent;
-      background-color: transparent;
-      font-size: 1.3rem;
-      font-family:Verdana, Geneva, Tahoma, sans-serif;
-      text-align: center;
+     	border-color: transparent;
+      	background-color: transparent;
+      	font-size: 1.3rem;
+      	font-family:Verdana, Geneva, Tahoma, sans-serif;
+      	text-align: center;
     }
   
     .menu-tablet{
