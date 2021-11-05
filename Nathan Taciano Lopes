@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="URF-8">
+    <title>Favoritos</title>
+    <link rel="shortcut icon" type="imagex/png" href="/Imagens/multi.png">
+    <link href="style.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link href="font-awesome/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="header">
+
+    </section>
+
+
+    <!--Montagem base - Favoritos -->
+    <section id="conteudo4" class="sportFav">
+
+        <div class="container">
+            <div class="conteudoText">
+                <span>Favoritos</span>
+                <span> Mensagem da semana: Motivacional </span>
+            </div>
+
+            <div class="Cards">
+
+                <div class="col-xs-12 col-md-5 cardSportFav">
+                    <i class="fas fa-heart heartFav" onclick="favCoracao(this);"></i>
+                    <img src="images/corrida1.jpg">
+                    <div class="cardEsportes">
+                        <span class="cardTitulo">CORRIDA</span>
+                        <span class="cardDescricao">"A velocidade que eu corro não importa, o prazer que eu sinto não
+                            tem cronômetro no mundo capaz de registrar."</span>
+                    </div>
+
+                    <div class="cardAtribuicao">
+                        
+                        <div class="progress distancia ">
+                            <span class="progress-bar">Distância percorrida: <b>23 km</b></span>
+                        </div>
+
+                        <div class="progress tMovimento ">
+                            <span class="progress-bar">Tempo de movimento: <b>6:13 min/km</b></span>
+                        </div>
+
+                        <div class="progress tCorrida">
+                            <span class="progress-bar">Tempo de corrida: <b>2h 23min 15s</b></span>
+                        </div>
+
+                        <div class="progress tMedia">
+                            <span class="progress-bar">Média de corrida: <b>9,65 km/h</b></span>
+                        </div>
+
+                        </span>
+                    </div>
+                </div>
