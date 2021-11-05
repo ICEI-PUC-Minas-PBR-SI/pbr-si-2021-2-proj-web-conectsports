@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Conect Sports</title>
+		<link href="custom.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<!-- AQUI COMECA O TOPO CINZA ESCURO -->
+		<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Perfil</a>
+		
+		</nav>
+		<!-- AQUI TERMINA O TOPO CINZA ESCURO -->
+
+		<!-- AQUI COMECA A PARTE DO CONTEUDO. -->
+		<div class="container-fluid">
+			<div class="row">
+				<!-- AQUI O MENU LATERAL. -->
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			      <div class="sidebar-sticky">
+			        <ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+									<path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+									<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+								  </svg>
+								  <a href="mapa de atividades.html">Todas</a><span class="sr-only">(current)</span>
+							 
+							</a>
+						</li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+								<path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+								<path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+							  </svg>
+			              Histórico
+			            </a>
+			          </li>
+			        </ul>
+			      </div>
+			    </nav>
+				
+				<!-- AQUI TERMINA O MENU LATERAL -->
+
+			    <!-- AQUI COMECA A PARTE DO CONTEUDO. -->
+			    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+			    	<h2>Histórico de Atividades</h2>
+                    <div class="fresh-table full-color-blue full-screen-table">
+                       
+                        <table id="fresh-table" class="table">
+                          <thead>
+                            <th data-field="id">ID</th>
+                            <th data-field="name" data-sortable="true">Atividade</th>
+                            <th data-field="salary" data-sortable="true">Duração</th>
+                            <th data-field="country" data-sortable="true">Companhia</th>
+                            <th data-field="city">Dia/Horário</th>
+                            <th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Local</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>-------</td>
+                              <td>-------</td>
+                              <td>-------</td>
+                              <td>-------</td>
+							  <td>-------</td>
+                            </tr>
+                            <tr>
+								<td>2</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+							  </tr>
+							  <tr>
+								<td>3</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+							  </tr>
+							  <tr>
+								<td>4</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+								<td>-------</td>
+							  </tr>
+                          </tbody>
+						  
+                        </table>
+                      </div>
+					
+				</div>
+      				</main>
+				
+    			<!-- AQUI TERMINA O CONTEUDO -->
+			</div>
+		</div>
+		<!-- AQUI COMECA O FOOTER -->
+		<footer class="footer mt-auto py-3">
+			<div class="container">
+			  <img src="../assets/img/marca.png" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="5%" height="10" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>ConectSports</title><rect width="100%" height="100%" fill="#eee"/></svg>
+		  <span class="badge badge-secondary float-right"></span>
+		  <span class="text-muted">Conect Sports Group</span>
+		</div>
+	  </div>
+			</div>
+		  </footer>
+	  </body>
