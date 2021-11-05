@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+body { font-family: 'Montserrat', sans-serif !important;} 
+img {max-width: 100%;}
+
+.conteudoText { text-align: center; position: relative; margin-top: 80px; }
+    .conteudoText span { display: block; }
+        .conteudoText span:last-child { color: #211780; font-size: 18px; font-weight: bold; }
+            .conteudoText span:first-child { color: #01BACC; letter-spacing: 2px; font-size: 30px; font-weight: bold; }
+            
+.Cards { text-align: center; display: inline; }    
+    .Cards div:nth-of-type(n-2) { display: inline-block; text-align: left; }
+
+.cardTitulo { color: #01bacc; font-size: 23px; font-weight: bold; display: block; margin-bottom: 15px; text-align: center;}
+
+.cardSportFav { background: white; margin: 40px; padding: 25px 40px !important; font-size: 12px; border-radius: 10px; box-shadow: 0px 0px 20px #ccc; text-align: center !important; transition: 0.3s; cursor: pointer; text-align: center; }
+    .cardSportFav:hover { transform: scale3d(1.1, 1.1, 1.1);}
+        .cardSportFav img { margin-bottom: 20px; width: 85%; }
+
+.cardSportFav .cardDescricao { display: flex; height: 100px; font-size: 16px; text-align: center;}
+
+.cardAtribuicao { display: block !important; text-align: left; margin-bottom: 5px; }
+
+.progress { height: 50px; background-color: #777; position: relative; }
+    .progress .progress-bar{ position: relative; text-align: left; padding: 0px 10px; height: 100%; animation: progress-animation 6s;animation-duration: 4s; -webkit-animation-fill-mode: forwards }
+        .progress b { display: contents; }
+
+.distancia span, .distancia {background-color: #0f3d5c; width: 80%; }
+
+.tMovimento span, .tMovimento {background-color: #03989e; width: 70%; }
+
+.tCorrida span, .tCorrida {background-color: #80d4d6; width: 60%; }
+
+.tMedia span, .tMedia {background-color: #041832; width: 50%; }
+
+.tpJogo span, .tpJogo {background-color: #0f3d5c; width: 80%; }
+
+.dJogo span, .dJogo {background-color: #03989e; width: 70%; }
+
+.fJogo span, .fJogo  {background-color: #80d4d6; width: 60%; }
+
+.cartoes span, .cartoes {background-color: #041832; width: 54%; }
+
+.heartFav { color: #ccc; float: left;font-size: 25px; }
+    .red {color:red !important;}
+    
+@keyframes progress-animation { 0% { width: 0%; } 100% { width: 100%} }
+
+
+@media (max-width: 767px) {
+.Cards { text-align: center; display: block !important; }
+
+.conteudoText { margin-top: 50px; margin-bottom: 20px; }
+
+.cardSportFav { background: white; margin: 0px; margin-bottom: 30px; }
+    .cardSportFav:hover { transform: none;}
+        .cardSportFav .cardDescricao { height: 120px; }
+
+.distancia, .tpJogo { width: 100%; }
+
+.tMovimento, .dJogo { width: 90%; }
+
+.tCorrida, .fJogo { width: 80%; }
+
+.tMedia, .cartoes {width: 70%; }
+
+}
