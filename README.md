@@ -1,4 +1,4 @@
-# Connect Sports
+# Conect Sports
 
 Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
