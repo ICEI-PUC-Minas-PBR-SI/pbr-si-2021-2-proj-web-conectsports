@@ -9,7 +9,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Beatriz Vitória Brandão Silva
 * Gabriel Henrique Ávila Silva
 * Igor Frederico Gomes Quaresma
-* Nathan Taciano Lopes
+* Nathan Taciano Lopes.
 * Rafael Tanure Carvalho 
 
 ## Professores responsáveis
