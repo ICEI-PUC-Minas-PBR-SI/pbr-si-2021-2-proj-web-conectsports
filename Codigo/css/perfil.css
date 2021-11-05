@@ -1,6 +1,19 @@
 body{
     background-image: linear-gradient(rgb(255, 255, 255), #03989e,rgb(21, 71, 100));
 }
+
+.navbar {
+    background-color: #0f3d5c;
+}
+
+#connectSportsLogo {
+    max-height: 38px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    margin: -5px;
+    padding: -5px;
+}
+
 .espaco{
     font-size: 0.5rem;
     color: transparent;
