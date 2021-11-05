@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Conect Sports</title>
+		<link href="custom.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<!-- AQUI COMECA O TOPO CINZA ESCURO -->
+		<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Guilherme Henrique</a>
+		
+		</nav>
+		<!-- AQUI TERMINA O TOPO CINZA ESCURO -->
+
+		<!-- AQUI COMECA A PARTE DO CONTEUDO. -->
+		<div class="container-fluid">
+			<div class="row">
+				<!-- AQUI O MENU LATERAL. -->
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			      <div class="sidebar-sticky">
+			        <ul class="nav flex-column">
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+								<path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+								<path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+							  </svg>
+			              Histórico
+			            </a>
+			          </li>
+			        </ul>
+			      </div>
+			    </nav>
+				
+				<!-- AQUI TERMINA O MENU LATERAL -->
+
+			    <!-- AQUI COMECA A PARTE DO CONTEUDO. -->
+			    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+			    	<h2>Histórico de Atividades</h2>
+                    <div class="fresh-table full-color-blue full-screen-table">
+                       
+                        <table id="fresh-table" class="table">
+                          <thead>
+                            <th data-field="name" data-sortable="true">Atividade</th>
+                            <th data-field="salary" data-sortable="true">Duração</th>
+							<th data-field="id">Distância</th>
+                            <th data-field="country" data-sortable="true">Companhia</th>
+                            <th data-field="city">Dia/Horário</th>
+                            <th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Local</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              
+                              <td>Ciclismo</td>
+                              <td>2h32m51s</td>
+							  <td>48,50 km</td>
+                              <td>@Stefane </td>
+                              <td>10/10/21 08:00</td>
+							  <td>Pampulha - Marco Zero</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+            
+                              <td>Ciclismo</td>
+                              <td>1h57m42s</td>
+							  <td>27,20 km</td>
+                              <td>@stefane, @igor, @rafael @nathan</td>
+							  <td>17/10/21 08:00</td>
+                              <td>Alphaville - Praça Principal</td>
+							  <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                            
+                              <td>Le Parkour</td>
+                              <td>1h13m47s</td>
+							  <td>Sem Marcação</td>
+                              <td>@Beatriz, @Gabriel</td>
+                              <td>23/10/21 20:30</td>
+							  <td>Praça da Liberdade</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                            
+                              <td>Corrida</td>
+                              <td>0h48m13s</td>
+							  <td>10 km</td>
+                              <td>@stefane, @nathan</td>
+                              <td>30/10/21 15:00</td>
+							  <td>Lagoa Seca</td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+						  
+                        </table>
+                      </div>
+					  <div class="fotografia">
+						<img src="../assets/img/ciclistapampulha.webp" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="20%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>foto1</title><rect width="100%" height="100%" fill="#eee"/></svg>
+						<img src="../assets/img/ciclismo alphavile.jpeg" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="20%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>foto2</title><rect width="100%" height="100%" fill="#eee"/></svg>
+						<img src="../assets/img/pampulha.jpeg" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="15%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>foto3</title><rect width="100%" height="100%" fill="#eee"/></svg>
+						<img src="../assets/img/pampulha2.jpeg" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="10%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>foto4</title><rect width="100%" height="100%" fill="#eee"/></svg>
+						<img src="../assets/img/leparkour.jpeg" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="20%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>foto4</title><rect width="100%" height="100%" fill="#eee"/></svg>
+					
+					</div>
+				</div>
+      				</main>
+				
+    			<!-- AQUI TERMINA O CONTEUDO -->
+			</div>
+		</div>
+		<!-- AQUI COMECA O FOOTER -->
+		<footer class="footer mt-auto py-3">
+			<div class="container">
+			  <img src="../assets/img/marca.png" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="5%" height="10" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>ConectSports</title><rect width="100%" height="100%" fill="#eee"/></svg>
+		  <span class="badge badge-secondary float-right"></span>
+		  <span class="text-muted">Conect Sports Group</span>
+		</div>
+	  </div>
+			</div>
+		  </footer>
+	  </body>
