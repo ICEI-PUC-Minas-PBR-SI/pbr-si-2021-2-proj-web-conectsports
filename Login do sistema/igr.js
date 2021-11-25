@@ -27,8 +27,7 @@ let senhaLogin = document.querySelector('#senhaLogin');
 function login() {
   let dadosLocalStorage = JSON.parse(localStorage.getItem("cadastro"));
   if (dadosLocalStorage.usuario == usuarioLogin.value && dadosLocalStorage.senha == senhaLogin.value) {
-    alert("Bem vindo ao sistema.")
-    
+    alert("Bem vindo ao sistema.")  
   } else {
     alert("Dados invalidos, tente novamente.")
   }
