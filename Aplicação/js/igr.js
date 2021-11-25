@@ -1,76 +1,73 @@
-let nome = document.querySelector('#nome');
-let usuario = document.querySelector('#usuario');
-let senha = document.querySelector('#senha');
-let email = document.querySelector('#email');
+let nome = document.querySelector("#nome");
+let usuario = document.querySelector("#usuario");
+let senha = document.querySelector("#senha");
+let email = document.querySelector("#email");
 
-let sexo = document.querySelector('#sexo');
-let dataDeNascimento = document.querySelector('#dataDeNascimento');
-let peso = document.querySelector('#peso');
-let altura = document.querySelector('#altura');
+let sexo = document.querySelector("#sexo");
+let dataDeNascimento = document.querySelector("#dataDeNascimento");
+let peso = document.querySelector("#peso");
+let altura = document.querySelector("#altura");
 
 function cadastrar() {
-
   let obj = {
     nome: nome.value,
     usuario: usuario.value,
     senha: senha.value,
-    email: email.value
-  }
+    email: email.value,
+  };
 
   if (obj.nome && obj.usuario && obj.senha && obj.email) {
     localStorage.setItem("cadastro", JSON.stringify(obj));
     alert("Cadastro realizado com sucesso.");
-    window.location.href = "./tela-login.html"
+    window.location.href = "./tela-login.html";
   } else {
     alert("Verifique se os campos estão preenchidos e tente novamente.");
   }
 }
 
-let usuarioLogin = document.querySelector('#userNameLogin');
-let senhaLogin = document.querySelector('#senhaLogin');
+let usuarioLogin = document.querySelector("#userNameLogin");
+let senhaLogin = document.querySelector("#senhaLogin");
 
 function login() {
   let dadosLocalStorage = JSON.parse(localStorage.getItem("cadastro"));
-  if (dadosLocalStorage.usuario == usuarioLogin.value && dadosLocalStorage.senha == senhaLogin.value) {  
-    window.location.href = "./tela-personalizar.html"  
+  if (
+    dadosLocalStorage.usuario == usuarioLogin.value &&
+    dadosLocalStorage.senha == senhaLogin.value
+  ) {
+    window.location.href = "./tela-personalizar.html";
   } else {
-    alert("Dados invalidos, tente novamente.")
+    alert("Dados invalidos, tente novamente.");
   }
 }
 
-function novoUsuario(){
-  window.location.href = "./tela-cadastro.html"
+function novoUsuario() {
+  window.location.href = "./tela-cadastro.html";
 }
 
-function novoEvento(){
-  window.location.href = "./novo-evento.html"
+function novoEvento() {
+  window.location.href = "./novo-evento.html";
 }
 
-function prosseguir(){ 
+function prosseguir() {
   let perso = {
     sexo: sexo.value,
     altura: altura.value,
     peso: peso.value,
     dataDeNascimento: dataDeNascimento.value,
-  }
-  if(perso.sexo && perso.altura && perso.dataDeNascimento && perso.peso){
+  };
+  if (perso.sexo && perso.altura && perso.dataDeNascimento && perso.peso) {
     localStorage.setItem("dadospessoais", JSON.stringify(perso));
-    alert("Bem vindo ao sistema.")
-    window.location.href = "./tela-perfil.html"
+    alert("Bem vindo ao sistema.");
+    window.location.href = "./tela-perfil.html";
+  } else {
+    alert("Preencha todos os campos necessários.");
   }
-  else{
-    alert("Preencha todos os campos necessários.")
-  }
-  
 }
 
-
-let divDadosPessoais = document.querySelector('#dadosPessoais');
-
-console.log(divDadosPessoais);
+let divDadosPessoais = document.querySelector("#dadosPessoais");
 
 function inserirDadosPessoais() {
-  let dadosPessoais = JSON.parse(localStorage.getItem('dadospessoais'));
+  let dadosPessoais = JSON.parse(localStorage.getItem("dadospessoais"));
 
   divDadosPessoais.innerHTML = `
     <p>Sexo: ${dadosPessoais.sexo}</p>
@@ -81,3 +78,34 @@ function inserirDadosPessoais() {
 }
 
 inserirDadosPessoais();
+
+let listaEventos = document.querySelector("#listaEventos");
+
+function getEventos() {
+  let lista = JSON.parse(localStorage.getItem("lista-eventos"));
+
+  console.log(listaEventos);
+
+  lista.forEach((evento) => {
+    console.log(evento);
+    let div = document.createElement("div");
+
+    div.innerHTML = `
+    <div class="card" style="width: 15rem; margin-bottom: 12px;">
+    <div class="card-body">
+        <p>Nome: ${evento.nome}</p>
+        <p>Local: ${evento.endereco} - ${evento.numEndereco} - ${evento.logradouro}</p>
+        <p>Horário: ${evento.horario}</p>
+        <p>Data: ${evento.datepicker}</p>
+        <p>Tipo de Atividade: ${evento.tipoAtividade}</p>
+        <p>Dificuldade: ${evento.dificuldade}</p>
+        <p>Descrição: ${evento.descricao}</p>
+
+    </div>
+</div>
+    `;
+    listaEventos.appendChild(div);
+  });
+}
+
+getEventos();

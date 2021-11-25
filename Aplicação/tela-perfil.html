@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
     <title>Perfil</title>
-    <script src="./js/fkatv.js"></script>
     <link rel="stylesheet" href="./css/perfil.css" />
 
     <script type="text/javascript">
@@ -18,7 +17,7 @@
         onload = () => {
             let pessoa = {
                 "nome": JSON.parse(localStorage.getItem("cadastro")).nome,
-                "usuario": JSON.parse(localStorage.getItem("cadastro")).usuario,              
+                "usuario": JSON.parse(localStorage.getItem("cadastro")).usuario,
 
             };
             console.log(pessoa['pessoa']);
@@ -60,35 +59,6 @@
 </head>
 
 <body>
-
-    <!--
-          <header class="header">
-            <img class="logo" width="60px" height="60px" src="./img/logo.png" alt="">
-            <nav class="nav-menu">
-              <input type="checkbox" id="menuToggle">
-              <label for="menuToggle" class="menu-icon">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times-circle"></i>
-              </label>
-              <ul class="menu">        
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Evento</a></li>
-                <li><a href="#">Criar Evento</a></li>
-                <li><a href="#">Perfil</a></li>
-              </ul>
-              <ul class="menu-tablet">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Evento</a></li>
-                <li><a href="#">Criar Evento</a></li>
-                <li><a href="#">Perfil</a></li>      
-              </ul>     
-            </nav>
-            <div id="busca">
-                  <input id="txtbusca" type="search" placeholder="Pesquisar..."/>
-                  <img src="./img/lupa.png" id="btn">
-              </div>
-          </header><div class="espaco">espaço</div>*/   -->
-
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -160,7 +130,7 @@
                     </span>
 
                     <span class="perfil-usuario">
-                        @<input id="usuario" disabled></p>                                               
+                        @<input id="usuario" disabled></p>
                     </span>
 
                 </div>
@@ -228,6 +198,12 @@
         <section class="perfil-atividades">
             <section class="perfil-container container-atividades">
                 <div class="container-atividades-title">
+                    EVENTOS
+                </div>
+                <div style="display: flex; flex-wrap: wrap;" id="listaEventos"></div>
+            </section>
+            <section class="perfil-container container-atividades">
+                <div class="container-atividades-title">
                     HISTÓRICO DE ATIVIDADES
                 </div>
 
@@ -245,32 +221,6 @@
                     <div class="box-atividade">
                         <a class="atividade-link" href="">
                             <div class="atividade-descricao">Corrida - 1h</div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="perfil-container container-atividades">
-                <div class="container-atividades-title">
-                    EVENTOS
-                </div>
-
-                <div class="box-atividades">
-                    <div class="box-atividade">
-                        <a class="atividade-link" href="">
-                            <div id="eventos" class="atividade-descricao"></div>
-                        </a>
-                    </div>
-                    <br>
-                    <div class="box-atividade">
-                        <a class="atividade-link" href="">
-                            <div id="eventos1" class="atividade-descricao"></div>
-                        </a>
-                    </div>
-                    <br>
-                    <div class="box-atividade">
-                        <a class="atividade-link" href="">
-                            <div id="eventos2" class="atividade-descricao"></div>
                         </a>
                     </div>
                 </div>
