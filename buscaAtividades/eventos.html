@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
+        <title>Perfil</title>
+        <script src="./js/fkatv.js"></script>
+        <link rel="stylesheet" href="./css/perfil.css" />
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="ConnectSports Logo" class="img" id="connectSportsLogo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Configurações</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>        
+
+        <div class="espaco"></div>
+        <section class="container-perfil">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> Eventos </h3>
+                        <small class='text-muted'> Selecione o evento e participe ! </small>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12 mt-3 mb-3 ">
+                        <form id="form">
+                            <input type="text" id="inputPesquisa" name="inputPesquisa" placeholder="Caminhada, Corrida, Ciclismo">
+                            <button type="button" onclick="carregarLista()">Pesquisar</button>
+                        </form>
+                    </div>
+
+                    <div class="col-md-12">
+                        <ul class="list-group" id="ulEventos">
+                        </ul>
+                    </div>
+                </div>                
+
+            </div>
+        </section>
+
+        <div class="container-fluid" id="footer">
+            <div class="row">
+                <p id="footerInfo">
+                    ConnectSports - Trabalho Interdisciplinar: Aplicações WEB
+                </p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"crossorigin="anonymous"></script>
+        <script>
+            function carregarLista(){
+                $("#ulEventos").html("");
+                let eventos = '{"eventos":['+
+                    '{ "Atividade": "Caminhada", "Data": "27 de novembro de 2021", "Local": "Marco Zero - Pampulha", "Horario": "07:00 am"},'+
+                    '{ "Atividade": "Caminhada", "Data": "27 de novembro de 2021", "Local": "Av. dos Andradas - entrada para metro Santa Tereza", "Horario": "09:00 am"},'+
+                    '{ "Atividade": "Caminhada", "Data": "28 de novembro de 2021", "Local": "Pampulha - Igrejinha - Igreja São Francisco de Assis", "Horario": "08:30 am"},'+
+                    '{ "Atividade": "Caminhada", "Data": "28 de novembro de 2021", "Local": "Praça do Papa - Rua do Amendoim", "Horario": "19:00 pm"},'+
+                    '{ "Atividade": "Corrida", "Data": "27 de novembro de 2021", "Local": "Pampulha - Igrejinha - Igreja São Francisco de Assis", "Horario": "07:00 am"},'+
+                    '{ "Atividade": "Corrida", "Data": "27 de novembro de 2021", "Local": "Marco Zero - Pampulha", "Horario": "09:00 am"},'+
+                    '{ "Atividade": "Corrida", "Data": "27 de novembro de 2021", "Local": "Av. dos Bandeirantes - Em Frente ao Nectar da Serra", "Horario": "09:30 am"},'+
+                    '{ "Atividade": "Corrida", "Data": "28 de novembro de 2021", "Local": "Marco Zero - Pampulha", "Horario": "07:30 am"},'+
+                    '{ "Atividade": "Ciclismo", "Data": "27 de novembro de 2021", "Local": "Pampulha - Igrejinha - Igreja São Francisco de Assis", "Horario": "18:00 am"},'+
+                    '{ "Atividade": "Ciclismo", "Data": "27 de novembro de 2021", "Local": "Marco Zero - Pampulha", "Horario": "09:00 am"},'+
+                    '{ "Atividade": "Ciclismo", "Data": "27 de novembro de 2021", "Local": "Retiro das Pedras", "Horario": "09:00 am"},'+
+                    '{ "Atividade": "Ciclismo", "Data": "28 de novembro de 2021", "Local": "Trilha MilkShake", "Horario": "08:30 am"}'+                
+                ']}';
+                let eventosObj = JSON.parse(eventos)
+                var input = document.querySelector("#inputPesquisa");
+                var texto = input.value;
+                console.log(texto);
+                let quantidadeEncontrada = 0
+                for (let i = 0; i < eventosObj.eventos.length; i++) {
+                    if (texto == ''){
+                        quantidadeEncontrada = quantidadeEncontrada+1;
+                        itemli ='<li class="list-group-item">' +
+                                        '<div class="row">'+
+                                            '<div class="col-md-6">'+
+                                                '<h5><strong>Atividade: </strong>'+eventosObj.eventos[i].Atividade+'</h5>'+
+                                                '<small class="text-muted"> <strong>Data: </strong>'+eventosObj.eventos[i].Data+'<strong> Horário: </strong>'+eventosObj.eventos[i].Horario+'</small>'+
+                                            '</div>'+
+                                            '<div class="col-md-6">'+
+                                                '<strong>Local: </strong> '+eventosObj.eventos[i].Local+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</li>'
+                        // Agora, ao invés de redefinir o HTML após cada iteração, estamos simplesmente
+                        // acrescentando o HTML gerado ao conteúdo, já existente, da lista:
+                        $("#ulEventos").append(itemli);
+                    }
+                    else
+                    {
+                        if (texto == eventosObj.eventos[i].Atividade){
+                            quantidadeEncontrada = quantidadeEncontrada+1;
+                            itemli ='<li class="list-group-item">' +
+                                            '<div class="row">'+
+                                                '<div class="col-md-6">'+
+                                                    '<h5><strong>Atividade: </strong>'+eventosObj.eventos[i].Atividade+'</h5>'+
+                                                    '<small class="text-muted"> <strong>Data: </strong>'+eventosObj.eventos[i].Data+'<strong> Horário: </strong>'+eventosObj.eventos[i].Horario+'</small>'+
+                                                '</div>'+
+                                                '<div class="col-md-6">'+
+                                                    '<strong>Local: </strong> '+eventosObj.eventos[i].Local+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</li>'
+                            // Agora, ao invés de redefinir o HTML após cada iteração, estamos simplesmente
+                            // acrescentando o HTML gerado ao conteúdo, já existente, da lista:
+                            $("#ulEventos").append(itemli);
+                        }
+                    }
+                }
+                if (quantidadeEncontrada == 0){
+                    $("#ulEventos").append('<li class="list-group-item"> Nenhuma atividade encontrada. </li>');
+                }
+            }
+            carregarLista();
+        </script>
+
+    </body>
+</html>
+
