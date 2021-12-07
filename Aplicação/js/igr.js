@@ -81,23 +81,22 @@ inserirDadosPessoais();
 
 let listaEventos = document.querySelector("#listaEventos");
 
+var lista = JSON.parse(localStorage.getItem("curtidos"));
+
 function getEventos() {
-  let lista = JSON.parse(localStorage.getItem("lista-eventos"));
-
-  console.log(listaEventos);
-
+  
   lista.forEach((evento) => {
-    console.log(evento);
+
     let div = document.createElement("div");
 
     div.innerHTML = `
     <div class="card" style="width: 15rem; margin-bottom: 12px;">
     <div class="card-body">
         <p>Nome: ${evento.nome}</p>
-        <p>Local: ${evento.endereco} - ${evento.numEndereco} - ${evento.logradouro}</p>
+        <p>Local: ${evento.logradouro} ${evento.endereco}, nº ${evento.enderecoN} - </p>
         <p>Horário: ${evento.horario}</p>
-        <p>Data: ${evento.datepicker}</p>
-        <p>Tipo de Atividade: ${evento.tipoAtividade}</p>
+        <p>Data: ${evento.data}</p>
+        <p>Tipo de Atividade: ${evento.atividade}</p>
         <p>Dificuldade: ${evento.dificuldade}</p>
         <p>Descrição: ${evento.descricao}</p>
 

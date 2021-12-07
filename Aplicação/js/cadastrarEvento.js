@@ -1,3 +1,4 @@
+/*
 let nome = document.querySelector("#nome");
 let tipoAtividade = document.querySelector("#atividade");
 let dificuldade = document.querySelector("#dificuldade");
@@ -40,3 +41,4 @@ $(function () {
     dateFormat: "dd/mm/yy",
   });
 });
+*/
