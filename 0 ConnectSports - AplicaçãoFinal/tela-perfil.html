@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="./img/logo.png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/perfil.css" />
+
+    <script type="text/javascript">
+        var nme = JSON.parse(localStorage.getItem("cadastro")).nome;
+        var usu = JSON.parse(localStorage.getItem("cadastro")).usuario;
+        onload = () => {
+            let pessoa = {
+                "nome": JSON.parse(localStorage.getItem("cadastro")).nome,
+                "usuario": JSON.parse(localStorage.getItem("cadastro")).usuario,
+            };
+            console.log(pessoa['pessoa']);
+            document.getElementById("nome").value = nme;
+            document.getElementById("usuario").value = usu;
+        }
+    </script>
+
+    <script>
+        function previewFile() {
+            var preview = document.querySelector('.imagem-usuario'); //selects the query named img
+            var file = document.querySelector('input[type=file]').files[0]; //sames as here
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        }
+
+        previewFile();
+    </script>
+
+    <script>
+        function Mudarestado(el) {
+            var display = document.getElementById(el).style.display;
+            if (display == "none")
+                document.getElementById(el).style.display = 'hidden';
+            else
+                document.getElementById(el).style.display = 'none';
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="ConnectSports Logo" class="img"
+                        id="connectSportsLogo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="tela-perfil.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" onclick="novoEvento()">Novo
+                                Evento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favoritos</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="tela-cadastro.html"  >Novo usuario</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-perfil">
+        <section class="container-dados-perfil">
+            <div id="perfil-card">
+                <div class='perfil-preview'>
+                    <div class="name-perfil-preview">
+                        <div class='preview-nome'>
+                            <input id="nome" disabled></p>
+                        </div>
+                        <div class="infos-perfil-preview">
+                            <div class="idade">
+                                2
+                                <!--idade-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imagem-perfil">
+                        <img id="primeira-imagem" src='./img/perfil.png' alt="aaaa">
+                        <img class="imagem-usuario" src='' alt="Ecolher Imagem" height="220">
+                        <img src="usuario" alt="">
+                    </div>
+                    <div class="info-perfil-preview">
+                        <p>Adicionar / Editar / Excluir Imagem de Perfil
+                            <img class="caneta" src="./img/caneta.png" alt="">
+                            <input onclick="Mudarestado('primeira-imagem')" class="arquivo" type="file"
+                                onchange="previewFile()"><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-perfil-descricao">
+                <div class="perfil-box-nome">
+                    <span class="perfil-nome">
+                        Descrição
+                    </span>
+
+                    <span class="perfil-usuario">
+                        @<input id="usuario" disabled></p>
+                    </span>
+
+                </div>
+
+                <div class="descricao" id="dadosPessoais">
+                    Sem descrição...
+                </div>
+        </section>
+
+        <!-- <section class="container-dados-numeros">
+            <div class="box-numeros">
+                <span class="box-numeros-title">
+                    Exercícios completos
+                </span>
+
+                15
+            </div>
+
+            <div class="box-numeros">
+                <span class="box-numeros-title">
+                    lorem
+                </span>
+
+                0
+            </div>
+
+            <div class="box-numeros">
+                <span class="box-numeros-title">
+                    lorem
+                </span>
+
+                0
+            </div>
+
+            <div class="box-numeros">
+                <span class="box-numeros-title">
+                    lorem
+                </span>
+
+                0
+            </div>
+
+            <div class="box-numeros">
+                <span class="box-numeros-title">
+                    lorem
+                </span>
+
+                0
+            </div>
+        </section> -->
+
+        <section class="perfil-container container-interesses">
+            <div class="container-interesses-title">
+                INTERESSES
+            </div>
+
+            <div class="box-interesses">
+                <div class="tags">Ciclismo</div>
+                <div class="tags">Corrida</div>
+                <div class="tags">Alpinismo</div>
+            </div>
+        </section>
+
+
+        <section class="perfil-atividades">
+            <section class="perfil-container container-atividades">
+                <div class="container-atividades-title">
+                    MEUS EVENTOS
+                </div>
+                <div style="display: flex; flex-wrap: wrap;" id="listaEventos"></div>
+            </section>
+            <section class="perfil-container container-atividades">
+                <div class="container-atividades-title">
+                    HISTÓRICO DE ATIVIDADES
+                </div>
+
+                <div class="box-atividades">
+                    <div class="box-atividade">
+                        <a class="atividade-link" href="">
+                            <div class="atividade-descricao">Corrida - 2h</div>
+                        </a>
+                    </div>
+                    <div class="box-atividade">
+                        <a class="atividade-link" href="">
+                            <div class="atividade-descricao">Ciclismo - 1h30</div>
+                        </a>
+                    </div>
+                    <div class="box-atividade">
+                        <a class="atividade-link" href="">
+                            <div class="atividade-descricao">Corrida - 1h</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+    <script>
+        var events = '';
+        var e2 = '';
+        var e3 = '';
+        events += `<p class="events">Data: ${db.dados[0].data} <br> </p>`;
+        events += `<p class="events">Hora: ${db.dados[0].hora} <br> </p>`;
+        events += `<p class="events">Local: ${db.dados[0].local} <br> </p>`;
+        document.getElementById('eventos').innerHTML = events;
+
+        e2 += `<p class="events">Data: ${db.dados[1].data} <br> </p>`;
+        e2 += `<p class="events">Hora: ${db.dados[1].hora} <br> </p>`;
+        e2 += `<p class="events">Local: ${db.dados[1].local} <br> </p>`;
+        document.getElementById('eventos2').innerHTML = e2;
+
+        e3 += `<p class="events">Data: ${db.dados[2].data} <br> </p>`;
+        e3 += `<p class="events">Hora: ${db.dados[2].hora} <br> </p>`;
+        e3 += `<p class="events">Local: ${db.dados[2].local} <br> </p>`;
+        document.getElementById('eventos1').innerHTML = e3;
+    </script>
+
+    <script src="./js/igr.js"></script>
+    <script type="text/javascript" src="./js/dadosIniciais.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

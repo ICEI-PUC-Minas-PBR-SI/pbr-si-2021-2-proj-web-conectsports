@@ -1,0 +1,68 @@
+/*
+azul claro: #80d4d6
+azul médio: #03989e
+azul escuro: #0f3d5c
+branco: #dddddd
+preto: #0a0a0a
+*/
+
+.navbar {
+    background-color: #0f3d5c;
+}
+
+#connectSportsLogo {
+    max-height: 38px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    margin: -5px;
+    padding: -5px;
+}
+
+.formulario {
+    max-width: 600px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.btn-primary {
+    background: #0f3d5c;
+    border-color: #0f3d5c;
+}
+
+.btn-primary:hover {
+    background: #03989e;
+    border-color: #03989e;
+}
+
+#row-criar {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-criar {
+    max-width: 200px;
+    align-self: center;
+}
+
+#footer {
+    display: flex;
+    background-color: #0f3d5c;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+#footerInfo {
+    color: #dddddd;
+    padding: 13px;
+    margin: 0px;
+    text-align: center;
+}
